@@ -1,0 +1,235 @@
+<html lang="en"><head>
+    <title>Project 2 Report</title>
+    <style>
+      :root {
+        --color-neutral-95: hsl(220 10% 95%);
+        --color-neutral-90: hsl(220 10% 90%);
+        --color-neutral-80: hsl(220 10% 80%);
+        --color-neutral-70: hsl(220 10% 70%);
+        --color-neutral-60: hsl(220 10% 60%);
+        --color-neutral-50: hsl(220 10% 50%);
+        --color-neutral-40: hsl(220 10% 40%);
+        --color-neutral-30: hsl(220 10% 30%);
+        --color-neutral-20: hsl(220 10% 20%);
+        --color-neutral-10: hsl(220 10% 10%);
+      }
+
+      html {
+        font: 100%/1.5 system-ui;
+        counter-reset: figure;
+        background: var(--color-neutral-95);
+        max-width: min(75vw, 80em);
+        margin: 0 auto;
+      }
+
+      /* Headings */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        line-height: 1.1;
+        font-weight: 600;
+        text-wrap: balance;
+      }
+
+      h1,
+      h2 {
+        border-bottom: 1px solid var(--color-neutral-80);
+        padding-bottom: 0.2em;
+      }
+
+      h1 {
+        margin-block: 1em 0.5rem;
+        font-size: clamp(2.5em, 150% + 2vh + 2vw, 10vmin);
+        font-weight: 800;
+
+        small {
+          display: block;
+          width: fit-content;
+          padding: 0.2em 0.5em;
+          margin-inline: auto;
+          color: white;
+          background: var(--color-neutral-40);
+          font-size: 40%;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+      }
+
+      h2 {
+        font-size: 180%;
+        color: var(--color-neutral-30);
+      }
+
+      h3 {
+        font-size: 130%;
+      }
+
+      /* Lists */
+
+      ul,
+      ol {
+        padding-inline-start: 2em;
+      }
+
+      li {
+        &::marker {
+          color: var(--color-neutral-40);
+        }
+
+        + li {
+          margin-top: 0.2em;
+        }
+      }
+
+      /* Sectioning elements */
+
+      header {
+        padding-block: 1em;
+        text-align: center;
+      }
+
+      main {
+        background: white;
+        color: var(--color-neutral-20);
+        border-radius: 1rem;
+        padding: 0.1rem 2rem;
+      }
+
+      /* Figures */
+
+      figure {
+        margin: 1em 0;
+        padding: 0.5rem;
+        margin-inline: -0.5em;
+        border: 1px solid var(--color-neutral-80);
+        box-shadow: 0 0.1em 0.2em var(--color-neutral-95);
+        text-align: center;
+        background: white;
+
+        > figcaption {
+          font: 500 75% var(--font-sans);
+          background: var(--color-neutral-95);
+          padding: 0.5rem;
+          margin: -0.5rem;
+          margin-top: 0.5rem;
+          counter-increment: figure;
+          text-align: left;
+
+          &::before {
+            content: 'Figure ' counter(figure) ': ';
+            font-weight: bold;
+            color: var(--color-neutral-40);
+          }
+
+          a:not(:hover, :focus, :active) {
+            color: inherit;
+            text-decoration: underline;
+            text-decoration-color: color-mix(
+              in lab,
+              currentColor,
+              transparent 70%
+            );
+          }
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <small>Assignment 4</small>
+        Persuasive or Deceptive Visualization?
+      </h1>
+
+      <p><strong>Ritvik Chand</strong> — <em>rchand@ucsd.edu</em></p>
+    </header>
+
+    <main>
+      <h2>Proposition: Climate change represents a serious environmental crisis requiring urgent action</h2>
+
+      <section>
+        <h3>FOR the Proposition</h3>
+
+        <figure>
+          <img src="./temperature_rise.png" alt="" width="700">
+          <figcaption>Portrays the upward trend in global precipitation depth, which is quickly reaching the critical point of the ecological threshold. The stable baseline from 1960-1990 shows volatile fluctuations and an alarming rise after the year 2000, showing the possible permanent changes in the climate system.</figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <ul>
+          <li><span><b>Color Selection Schema</b></span></li>
+          <p>
+            <span><i>Score: -1</i></span>
+            <br>
+            I decided to use a darkish red color to represent the threshold line and the main line to give the reader a sense of urgency and suddeness. I wanted to perceive this data in a way which makes it seem problematic. I believe that colors can represent many different things, but the red scheme that I chose was specifically used to trigger an emotional response as opposed to more neutral colors which would not do so. This makes it more deceptive.
+          </p>
+          <li><span><b>Fake "Critical Threshold" Line</b></span></li>
+          <p>
+            <span><i>Score: -2</i></span>
+            <br>
+            I integrated an additional line to represent the critical threshold, but there is no actual scientific data to support the claims. Visually, this adds on to the urgency of the visualization by implying that the line is reaching a not so good tipping point. I made this deceptive to show how it can falsify a threshold that is not proven scientificlly, but can still be effective in alarming readers that there is a huge decline and crisis in the enviornment. 
+          </p>
+          <li><span><b>Critical and Alarming Annotations</b></span></li>
+          <p>
+            <span><i>Score: -1</i></span>
+            <br>
+            Another deception method I used was to add overexaggerated annotations such as "Approaching critical threshold" and "Rapid acceleration in recent periods" which portray the data in the visualization in the most alarming way. They make it so viewers think about the data as more of a problem rather than letting them make their own observations about it. 
+          </p>
+        </ul>
+      </section>
+
+      <section>
+        <h3>AGAINST the Proposition</h3>
+
+        <figure>
+          <img src="./climate_variability.png" alt="" width="700">
+          <figcaption>Shows the varitation between multiple industries such as fishing, agriculture, and forestry from 1990-2020. From 2018-2020, there have been many fluctuations after the climate had been stable for so long and followed a trend from the decades prior, suggesting that recent changes are similar to the overall trend.  </figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <ul>
+          <li><span><b>Narrowed y-axis to start later</b></span></li>
+            <p>
+                <span><i>Score: -1.5</i></span>
+                <br>
+                Instead of starting the time earlier, I decided to start my visualization at 1990, so that I could keep out a lot of the long-terms trends which would provide the reader with more alarming patterns. I narrowed the time range to make the impression that the variations in that range are normal fluctuations that are short-term rather than something more in the long run. Since it excludes important historical data, this visualization is deceptive.
+            </p>
+         <li><span><b>Not using a Line Chart to represent trends</b></span></li>
+            <p>
+                <span><i>Score: -1</i></span>
+                <br>
+                Instead of using a typical line graph to keep track of the trend through the years, I instead used a bar chart on purpose which is not so good at representing this. Furthermore, the bar chart highlights the importance of specific values rather than trends over time, making it seem as though the variations year-to-year are disconnected and don't necessarily show a problematic pattern. Compared to the other deception techniques, this one is less deceptive as it doesn't portray how climate change can be continous.
+            </p>
+         <li><span><b>Creating an Unproblematic Title</b></span></li>
+            <p>
+                <span><i>Score: -1</i></span>
+                <br>
+                The title that I wrote for my visualization makes it seems like the data represents a more natural cause rather than anything that is concering about climate change. I chose this deception technique to tilt readers to understand the data as being something that natural happens and variates each year and less so something that has been happening for a long time with problematic trends. The title makes the visualization seem descriptive and true, but sabotages the reader into looking at the short-term deviations for climate change rather than the long-term.
+            </p>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Final Reflection</h2>
+
+        <p>
+            Project 2 has really been a cool and exciting introduction into data visualization and everything that you can uncover from data. I was very surprised by how the same dataset could be respresented in so many ways, both perceptive and deceptive. Furthermore, data could tell so many different stories through basic design choices when it comes to the visualization. This can change the view of a reader in so many different ways. By developing unique visualizations that persuaded readers in different viewpoints, I was required to really think about certain factors such as plots, annotations, color choices and more and how these choices can give someone a perception about what they are looking at.
+            <br>
+            <br>
+            Another interesting thing that I uncovered was how things that may seem persuasive can also seems deceptive and vice versa. This is where a lot of the choices that I made when designing the visualization became neutral since I wasn't completely falsifying information, I was insteading hiding important trends and persuading readers into a certain conclusion. For the second climate variations visualization, I designed the data so that the time period was more narrow than it was supposed to be, allowing for the relationships between different data points to be influences in one direction, which was not neccessarily the most accurate. Something I learned from this is that when we as readers see a visualization, we think more about the neutral and standard interpretations rather than the speicfic choices that can make this interpretation.
+            <br>
+            <br>
+            When it comes to how I would describe ethical analysis and visualization, I would say that it is more about the choices that I made to make the data limited and as transparent as possible, instead of describing it from a completely neutral standpoint. The difference that I noticed between true persuasion and deception that is misleading comes down to whether the visualization helps the readers make informed decision about the data or deceives them into concluding things about the data early one. I believe that true persuasion is able to portray the actual patterns in the data with important context, as oppose to deception which doesn't reveal the important information and overexaggerates the trends through unsupported relationships in the data. Ultimately, I have become more aware that other designers like myself have more ethical obligations than they might think and even the smallest design choices can impact how the readers and the general public assess climate change and it's respective issues.
+        </p>
+      </section>
+    </main>
+  
+
+</body></html>
